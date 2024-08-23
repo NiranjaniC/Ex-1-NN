@@ -1,7 +1,7 @@
-<H3>ENTER YOUR NAME</H3>
-<H3>ENTER YOUR REGISTER NO.</H3>
+<H3>ENTER YOUR NAME : Niranjani.C</H3>
+<H3>ENTER YOUR REGISTER NO: 21223220069</H3>
 <H3>EX. NO.1</H3>
-<H3>DATE</H3>
+<H3>DATE : 23/08/2024</H3>
 <H1 ALIGN =CENTER> Introduction to Kaggle and Data preprocessing</H1>
 
 ## AIM:
@@ -37,11 +37,55 @@ STEP 5:Normalizing the data<BR>
 STEP 6:Splitting the data into test and train<BR>
 
 ##  PROGRAM:
-TYPE YOUR CODE HERE
+import pandas as pd
+import io
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
+
+df=pd.read_csv('/content/Churn_Modelling.csv')
+print(df.head())
+
+X=df.iloc[:,:-1].values
+print(X)
+
+y=df.iloc[:,-1].values
+print(y)
+
+print(df.isnull().sum())
+
+df.duplicated()
+
+df.describe()
+
+df = df.drop(['Surname', 'Geography','Gender'], axis=1)
+df.head()
+
+scaler=MinMaxScaler()
+df1=pd.DataFrame(scaler.fit_transform(df))
+print(df1)
+
+X_train ,X_test ,y_train,y_test=train_test_split(X,y,test_size=0.2)
+
+print(X_train)
+print(len(X_train))
+
+print(X_test)
+print(len(X_test))
 
 
 ## OUTPUT:
-SHOW YOUR OUTPUT HERE
+![Screenshot 2024-08-23 081506](https://github.com/user-attachments/assets/d3eaec06-de65-4266-b4aa-20d20f3ccd9b)
+![Screenshot 2024-08-23 081609](https://github.com/user-attachments/assets/56b0b99f-a144-4666-ac88-e582d2c5703e)
+![Screenshot 2024-08-23 081644](https://github.com/user-attachments/assets/1f928434-292c-4f73-a788-218c9841b177)
+![Screenshot 2024-08-23 091804](https://github.com/user-attachments/assets/71c51224-7f1f-4343-aea2-4447adb7c768)
+![Screenshot 2024-08-23 091843](https://github.com/user-attachments/assets/459f1069-bd95-45e0-9503-c286d124cd9f)
+![Screenshot 2024-08-23 091948](https://github.com/user-attachments/assets/68f444bc-1183-43b1-bc0b-3709fd0d5f58)
+![Screenshot 2024-08-23 092033](https://github.com/user-attachments/assets/74055cc2-4f8a-4420-8597-549f129aaa72)
+![Screenshot 2024-08-23 092116](https://github.com/user-attachments/assets/e9c25fa5-c19d-465b-ad90-54d530f275ea)
+![Screenshot 2024-08-23 092156](https://github.com/user-attachments/assets/16370c25-5457-403c-ba02-436e3ec879f3)
+![Screenshot 2024-08-23 092221](https://github.com/user-attachments/assets/81534f56-3b47-4062-bda1-079a5ea26ab8)
+
 
 
 ## RESULT:
