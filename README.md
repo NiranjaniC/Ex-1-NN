@@ -1,7 +1,7 @@
 <H3>ENTER YOUR NAME : Niranjani.C</H3>
 <H3>ENTER YOUR REGISTER NO: 21223220069</H3>
 <H3>EX. NO.1</H3>
-<H3>DATE : 23/08/2024</H3>
+<H3>DATE : 19/08/2024</H3>
 <H1 ALIGN =CENTER> Introduction to Kaggle and Data preprocessing</H1>
 
 ## AIM:
@@ -37,6 +37,7 @@ STEP 5:Normalizing the data<BR>
 STEP 6:Splitting the data into test and train<BR>
 
 ##  PROGRAM:
+```
 import pandas as pd
 import io
 from sklearn.preprocessing import StandardScaler
@@ -72,7 +73,7 @@ print(len(X_train))
 
 print(X_test)
 print(len(X_test))
-
+```
 
 ## OUTPUT:
 ![Screenshot 2024-08-23 081506](https://github.com/user-attachments/assets/d3eaec06-de65-4266-b4aa-20d20f3ccd9b)
